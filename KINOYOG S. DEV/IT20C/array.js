@@ -50,7 +50,19 @@ update (index,element)
 {
 
 }
-//
+delete(index)
+//correcting statements
+if(index < 0 || index >=this.length){
+    console.log("Invalid Index");
+    return;
+}
+
+//shifting
+for (let i = index; i< this.length; i++){
+    this.data[i] = this.data[i+1];
+}
+delete this.data[this.length-1];
+this.length--;
 
 arr1 = new Array ([4,2,3]);
 
